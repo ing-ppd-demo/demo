@@ -5,5 +5,4 @@ rvm:
 install: gem install jekyll
 script: jekyll build
 deploy:
-	skip_cleanup: true
 	wget google.ch
