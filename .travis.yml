@@ -10,6 +10,8 @@ script: jekyll build
 after_success:
   - cd _site/
   - export SSHPASS=$DEPLOY_PASSWORD
+  - echo $DEPLOY_USER
+  - echo $DEPLOY_HOST
   - sshpass -e scp -v -r . $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 env:
   global:
