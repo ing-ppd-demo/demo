@@ -9,7 +9,8 @@ install: gem install jekyll
 script: jekyll build
 after_success:
   - cd _site/
-  - sshpass scp -v -r . $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+  - export SSHPASS=$DEPLOY_PASSWORD
+  - sshpass -e scp -v -r . $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 env:
   global:
   - secure: no44TQBGzyrF3bLDS+Iq6Vuub2KHHlbIbUaLmK1irBdleVaQ/UcaBqgx+L3kpL/dogGLDOSbW9neEL+w8OJcpKKORv88dh3KlEZwtfhzAo/dzH8lebL++35hX0StmqncDIk/t5uQCIsZ5+H9ZqecNT1ZSfku3kA3g0ECGalL+CgPFp4/OHZEJoIho6M+YJwwqEWy2fe0Z1Cu2wS+MZybFVs20br6MfRcOy8paFw7hO9T7U6G7AObJcSUEjhxN/iKM5kvvnT0aF0/7Bgz0vqx4Pp3F+WF89oaS7poc/8YquuAJmwJCA5b7W7l1dKPmk2lltl/AF1WPDyx6S18kBQ2sTuLAkjm8TFRECgdQiLuUtRruTArycRfy8Xgm9ymKqGmduRsjk18Pg/Kxx2DbIWe+cQtC0eAVb+n3WD2H6EpJb6CVof+kwc3Wtg/HuUwJwWbe+QQCNOSUmRotAcV9NXrvZD/HZYXuf/0GZM5U+KePXx1GuytsEFnOG+bzZewG+yrhymXD2oSDIC5rjwuK3w6O0m5MVfUdhgrtZ+L/Vw9fZ8EA7BRn9NtfeJTC/ullwH1+YVnkjumrB8ublvNITUDIdHOU9Xzk++hukLvodrDoE6xkvqf6S0fhmyYX8PR25ZHbOJnggPfJMrql75+IrRv1HkG0kRoRGlYg21Bgi4fibE=
