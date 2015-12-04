@@ -1,8 +1,13 @@
 ---
 layout: page
-title: About-this-Page
+title: "About-this-Page"
 permalink: /about/
+published: true
 ---
+
+# This is how to change the about page
+
+Later you can add more pages
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
